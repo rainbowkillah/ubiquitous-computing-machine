@@ -53,14 +53,19 @@ if (action === 'put' && options.value) {
     cwd: projectRoot,
     stdio: ['pipe', 'inherit', 'inherit'],
   });
+  
+  proc.stdin.on('error', (err) => {
+    console.error('Failed to write to stdin:', err);
+  });
+  
   proc.stdin.write(options.value);
   proc.stdin.end();
 
   await new Promise((resolve, reject) => {
-    proc.on('exit', (code) => code === 0 ? resolve(code) : reject(code));
+    proc.on('exit', (code) => code === 0 ? resolve(code) : reject(new Error(`Process exited with code ${code}`)));
+    proc.on('error', reject);
   });
 }
-```
 
 **Severity:** CRITICAL - Must be fixed before merge
 
