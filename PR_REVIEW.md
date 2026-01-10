@@ -40,8 +40,7 @@ This is vulnerable to command injection. If `options.value` contains characters 
 
 **Example Attack:**
 ```bash
-nx run myapp:secret --action=put --name=API_KEY --value='"; rm -rf / #'
-```
+nx run myapp:secret --action=put --name=API_KEY --value='"; echo "INJECTED COMMAND" #'
 
 **Recommended Fix:**
 Use Node.js built-in methods to handle stdin securely:
