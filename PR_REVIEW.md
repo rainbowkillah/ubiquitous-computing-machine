@@ -256,21 +256,16 @@ npx: command not found: wrangler
 Add validation at the start of each executor:
 
 ```typescript
-import { execSync } from 'child_process';
+import { exec } from 'child_process';
+import { promisify } from 'util';
 
-```typescript
-import { execSync } from 'child_process';
+const execAsync = promisify(exec);
 
-function checkWranglerInstalled(): boolean {
+async function checkWranglerInstalled(): Promise<boolean> {
   try {
-    execSync('npx wrangler --version', { 
-      stdio: 'ignore',
-      timeout: 5000 // Add timeout to prevent hanging
-    });
+    await execAsync('npx wrangler --version');
     return true;
-  } catch (error) {
-    // Log the specific error for debugging
-    console.debug('Wrangler check failed:', error.message);
+  } catch {
     return false;
   }
 }
@@ -279,7 +274,7 @@ const runExecutor: PromiseExecutor<DevExecutorSchema> = async (
   options,
   context: ExecutorContext
 ) => {
-  if (!checkWranglerInstalled()) {
+  if (!(await checkWranglerInstalled())) {
     console.error('Error: Wrangler is not installed.');
     console.error('Install it with: npm install -D wrangler');
     return { success: false };
