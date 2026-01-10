@@ -258,11 +258,19 @@ Add validation at the start of each executor:
 ```typescript
 import { execSync } from 'child_process';
 
+```typescript
+import { execSync } from 'child_process';
+
 function checkWranglerInstalled(): boolean {
   try {
-    execSync('npx wrangler --version', { stdio: 'ignore' });
+    execSync('npx wrangler --version', { 
+      stdio: 'ignore',
+      timeout: 5000 // Add timeout to prevent hanging
+    });
     return true;
-  } catch {
+  } catch (error) {
+    // Log the specific error for debugging
+    console.debug('Wrangler check failed:', error.message);
     return false;
   }
 }
