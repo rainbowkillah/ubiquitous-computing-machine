@@ -10,7 +10,7 @@ This document summarizes the Nx Cloudflare Toolchain Parity implementation compl
 - ✅ Configured `.gitignore` to exclude node_modules and build artifacts
 - ✅ Set up CI/CD with GitHub Actions
 
-### 2. @acme/nx-cloudflare-wrangler Plugin
+### 2. @rainbowkillah/nx-cloudflare-wrangler Plugin
 
 **Executors Implemented:**
 - ✅ `dev` - Wraps `wrangler dev` for local development
@@ -33,7 +33,7 @@ All executors have:
 - ✅ Support for extraArgs for additional flags
 - ✅ Unit tests that pass
 
-### 3. @acme/nx-cloudflare-c3 Plugin
+### 3. @rainbowkillah/nx-cloudflare-c3 Plugin
 
 **Generators Created:**
 - ✅ `app` - Application scaffolding (scaffolded)

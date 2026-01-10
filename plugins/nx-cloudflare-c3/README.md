@@ -84,22 +84,22 @@ apps/
 
 ## Integration with Wrangler Plugin
 
-The generated projects automatically integrate with `@acme/nx-cloudflare-wrangler`:
+The generated projects automatically integrate with `@rainbowkillah/cf-wrangler`:
 
 ```json
 {
   "targets": {
     "dev": {
-      "executor": "@acme/nx-cloudflare-wrangler:dev"
+      "executor": "@rainbowkillah/cf-wrangler:dev"
     },
     "deploy": {
-      "executor": "@acme/nx-cloudflare-wrangler:deploy"
+      "executor": "@rainbowkillah/cf-wrangler:deploy"
     },
     "tail": {
-      "executor": "@acme/nx-cloudflare-wrangler:tail"
+      "executor": "@rainbowkillah/cf-wrangler:tail"
     },
     "types": {
-      "executor": "@acme/nx-cloudflare-wrangler:types"
+      "executor": "@rainbowkillah/cf-wrangler:types"
     }
   }
 }

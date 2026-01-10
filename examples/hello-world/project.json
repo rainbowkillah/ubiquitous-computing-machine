@@ -5,7 +5,7 @@
   "projectType": "application",
   "targets": {
     "dev": {
-      "executor": "@acme/nx-cloudflare-wrangler:dev",
+      "executor": "@rainbowkillah/cf-wrangler:dev",
       "options": {
         "config": "wrangler.jsonc",
         "port": 8787,
@@ -13,7 +13,7 @@
       }
     },
     "deploy": {
-      "executor": "@acme/nx-cloudflare-wrangler:deploy",
+      "executor": "@rainbowkillah/cf-wrangler:deploy",
       "options": {
         "config": "wrangler.jsonc"
       },
@@ -27,26 +27,26 @@
       }
     },
     "tail": {
-      "executor": "@acme/nx-cloudflare-wrangler:tail",
+      "executor": "@rainbowkillah/cf-wrangler:tail",
       "options": {
         "config": "wrangler.jsonc",
         "format": "pretty"
       }
     },
     "delete": {
-      "executor": "@acme/nx-cloudflare-wrangler:delete",
+      "executor": "@rainbowkillah/cf-wrangler:delete",
       "options": {
         "config": "wrangler.jsonc"
       }
     },
     "types": {
-      "executor": "@acme/nx-cloudflare-wrangler:types",
+      "executor": "@rainbowkillah/cf-wrangler:types",
       "options": {
         "config": "wrangler.jsonc"
       }
     },
     "secret": {
-      "executor": "@acme/nx-cloudflare-wrangler:secret",
+      "executor": "@rainbowkillah/cf-wrangler:secret",
       "options": {
         "config": "wrangler.jsonc"
       }

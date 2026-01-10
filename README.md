@@ -8,7 +8,7 @@ A comprehensive Nx workspace providing one-for-one parity with Cloudflare's Wran
 
 ### Nx Plugins
 
-- **[@acme/nx-cloudflare-wrangler](./plugins/nx-cloudflare-wrangler)**: Executors and generators for Wrangler CLI integration
+- **[@rainbowkillah/cf-wrangler](./plugins/nx-cloudflare-wrangler)**: Executors and generators for Wrangler CLI integration
 - **[@acme/nx-cloudflare-c3](./plugins/nx-cloudflare-c3)**: Project scaffolding equivalent to create-cloudflare (C3)
 
 ### Executors
@@ -103,7 +103,7 @@ apps/
 nx g @nx/js:library shared-utils
 
 # Import in multiple workers
-import { helper } from '@acme/shared-utils';
+import { helper } from '@rainbowkillah/shared-utils';
 ```
 
 ### Environment Management

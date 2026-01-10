@@ -15,10 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@acme/nx-cloudflare-wrangler": [
+      "@rainbowkillah/cf-wrangler": [
         "plugins/nx-cloudflare-wrangler/src/index.ts"
       ],
-      "@acme/nx-cloudflare-c3": ["plugins/nx-cloudflare-c3/src/index.ts"]
+      "@rainbowkillah/cf-c3": ["plugins/nx-cloudflare-c3/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

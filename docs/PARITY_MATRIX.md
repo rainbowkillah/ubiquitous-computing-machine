@@ -23,7 +23,7 @@ This document maps Nx commands to their Wrangler/C3 equivalents and documents an
 
 | C3 Command | Nx Command | Status | Notes |
 |-----------|------------|---------|-------|
-| `npm create cloudflare` | `nx g @acme/nx-cloudflare-c3:app` | ✅ Complete | Full scaffolding with templates |
+| `npm create cloudflare` | `nx g @rainbowkillah/cf-c3:app` | ✅ Complete | Full scaffolding with templates |
 | Interactive project setup | Generator prompts | ✅ Complete | Same UX as C3 |
 | Framework selection | `--framework` option | ✅ Complete | React, Vue, Next.js, etc. |
 | TypeScript support | `--typescript` option | ✅ Complete | Automatic TS configuration |

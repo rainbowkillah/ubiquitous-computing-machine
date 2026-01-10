@@ -1,4 +1,4 @@
-# @acme/nx-cloudflare-wrangler
+# @rainbowkillah/cf-wrangler
 
 Nx plugin providing executors and generators for Cloudflare Wrangler CLI integration.
 
@@ -23,7 +23,7 @@ Nx plugin providing executors and generators for Cloudflare Wrangler CLI integra
 ## Installation
 
 ```bash
-npm install --save-dev @acme/nx-cloudflare-wrangler
+npm install --save-dev @rainbowkillah/cf-wrangler
 ```
 
 ## Usage
