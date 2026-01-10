@@ -1,0 +1,34 @@
+{
+  "executors": {
+    "dev": {
+      "implementation": "./src/executors/dev/dev",
+      "schema": "./src/executors/dev/schema.json",
+      "description": "Run wrangler dev"
+    },
+    "deploy": {
+      "implementation": "./src/executors/deploy/deploy",
+      "schema": "./src/executors/deploy/schema.json",
+      "description": "Deploy with wrangler"
+    },
+    "tail": {
+      "implementation": "./src/executors/tail/tail",
+      "schema": "./src/executors/tail/schema.json",
+      "description": "Tail logs with wrangler"
+    },
+    "delete": {
+      "implementation": "./src/executors/delete/delete",
+      "schema": "./src/executors/delete/schema.json",
+      "description": "Delete deployment with wrangler"
+    },
+    "types": {
+      "implementation": "./src/executors/types/types",
+      "schema": "./src/executors/types/schema.json",
+      "description": "Generate types with wrangler"
+    },
+    "secret": {
+      "implementation": "./src/executors/secret/secret",
+      "schema": "./src/executors/secret/schema.json",
+      "description": "Manage secrets with wrangler"
+    }
+  }
+}

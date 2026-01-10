@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "title": "Types executor",
+  "description": "Generate types with wrangler",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "string",
+      "description": "Path to wrangler config file"
+    },
+    "env": {
+      "type": "string",
+      "description": "Environment to generate types for"
+    },
+    "output": {
+      "type": "string",
+      "description": "Output path for generated types"
+    },
+    "extraArgs": {
+      "type": "array",
+      "description": "Additional arguments to pass to wrangler types",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "required": []
+}
