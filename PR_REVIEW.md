@@ -460,7 +460,7 @@ Should add proper scripts:
 "compatibility_date": "2024-01-01"
 ```
 
-Should be updated to current date (2025-01-10 or later).
+Should be updated to current date (2026-01-10 or later).
 
 ---
 
