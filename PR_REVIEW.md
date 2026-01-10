@@ -147,11 +147,15 @@ describe('Dev Executor', () => {
   });
 
   it('should handle errors gracefully', async () => {
+    const options: DevExecutorSchema = {
+      config: 'wrangler.jsonc'
+    };
+    
     mockExecSync.mockImplementation(() => {
       throw new Error('Wrangler failed');
     });
 
-    const result = await executor({}, context);
+    const result = await executor(options, context);
     expect(result.success).toBe(false);
   });
 });
