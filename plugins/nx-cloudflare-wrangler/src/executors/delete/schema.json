@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "title": "Delete executor",
+  "description": "Delete deployment with wrangler",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "string",
+      "description": "Path to wrangler config file"
+    },
+    "env": {
+      "type": "string",
+      "description": "Environment to delete"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the worker to delete"
+    },
+    "force": {
+      "type": "boolean",
+      "description": "Skip confirmation prompt",
+      "default": false
+    },
+    "extraArgs": {
+      "type": "array",
+      "description": "Additional arguments to pass to wrangler delete",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "required": []
+}

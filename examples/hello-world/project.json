@@ -1,0 +1,56 @@
+{
+  "name": "hello-world",
+  "root": "examples/hello-world",
+  "sourceRoot": "examples/hello-world/src",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@rainbowkillah/cf-wrangler:dev",
+      "options": {
+        "config": "wrangler.jsonc",
+        "port": 8787,
+        "local": true
+      }
+    },
+    "deploy": {
+      "executor": "@rainbowkillah/cf-wrangler:deploy",
+      "options": {
+        "config": "wrangler.jsonc"
+      },
+      "configurations": {
+        "production": {
+          "env": "production"
+        },
+        "staging": {
+          "env": "staging"
+        }
+      }
+    },
+    "tail": {
+      "executor": "@rainbowkillah/cf-wrangler:tail",
+      "options": {
+        "config": "wrangler.jsonc",
+        "format": "pretty"
+      }
+    },
+    "delete": {
+      "executor": "@rainbowkillah/cf-wrangler:delete",
+      "options": {
+        "config": "wrangler.jsonc"
+      }
+    },
+    "types": {
+      "executor": "@rainbowkillah/cf-wrangler:types",
+      "options": {
+        "config": "wrangler.jsonc"
+      }
+    },
+    "secret": {
+      "executor": "@rainbowkillah/cf-wrangler:secret",
+      "options": {
+        "config": "wrangler.jsonc"
+      }
+    }
+  },
+  "tags": ["example", "worker"]
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "version": 2,
+  "title": "Deploy executor",
+  "description": "Deploy with wrangler",
+  "type": "object",
+  "properties": {
+    "config": {
+      "type": "string",
+      "description": "Path to wrangler config file (wrangler.jsonc or wrangler.toml)"
+    },
+    "env": {
+      "type": "string",
+      "description": "Environment to deploy to (dev/stage/prod)"
+    },
+    "dryRun": {
+      "type": "boolean",
+      "description": "Perform a dry run (validate without deploying)",
+      "default": false
+    },
+    "noBundle": {
+      "type": "boolean",
+      "description": "Skip internal build steps and directly deploy script",
+      "default": false
+    },
+    "verbose": {
+      "type": "boolean",
+      "description": "Enable verbose logging",
+      "default": false
+    },
+    "extraArgs": {
+      "type": "array",
+      "description": "Additional arguments to pass to wrangler deploy",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  },
+  "required": []
+}
