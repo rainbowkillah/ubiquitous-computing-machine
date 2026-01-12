@@ -4,7 +4,9 @@
   "description": "NX Plugin Generator Executor Development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nx run-many --target=test --all",
+    "build": "nx run-many --target=build --all",
+    "lint": "nx run-many --target=lint --all"
   },
   "keywords": [],
   "author": "",
