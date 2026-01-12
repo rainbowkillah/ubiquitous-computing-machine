@@ -9,7 +9,7 @@ A comprehensive Nx workspace providing one-for-one parity with Cloudflare's Wran
 ### Nx Plugins
 
 - **[@rainbowkillah/cf-wrangler](./plugins/nx-cloudflare-wrangler)**: Executors and generators for Wrangler CLI integration
-- **[@acme/nx-cloudflare-c3](./plugins/nx-cloudflare-c3)**: Project scaffolding equivalent to create-cloudflare (C3)
+- **[@rainbowkillah/cf-c3](./plugins/nx-cloudflare-c3)**: Project scaffolding equivalent to create-cloudflare (C3)
 
 ### Executors
 
