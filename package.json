@@ -39,5 +39,8 @@
     "typescript-eslint": "^8.40.0"
   },
   "nx": {},
-  "dependencies": {}
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20241218.0",
+    "wrangler": "^3.80.0"
+  }
 }
