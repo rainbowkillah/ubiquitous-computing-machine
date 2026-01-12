@@ -1,0 +1,24 @@
+{
+  "generators": {
+    "init": {
+      "factory": "./src/generators/init/init",
+      "schema": "./src/generators/init/schema.json",
+      "description": "Initialize workspace with Cloudflare tooling"
+    },
+    "config": {
+      "factory": "./src/generators/config/config",
+      "schema": "./src/generators/config/schema.json",
+      "description": "Generate wrangler.jsonc config"
+    },
+    "binding": {
+      "factory": "./src/generators/binding/binding",
+      "schema": "./src/generators/binding/schema.json",
+      "description": "Add/update bindings (KV, R2, D1, etc.)"
+    },
+    "env": {
+      "factory": "./src/generators/env/env",
+      "schema": "./src/generators/env/schema.json",
+      "description": "Generate environment sets"
+    }
+  }
+}

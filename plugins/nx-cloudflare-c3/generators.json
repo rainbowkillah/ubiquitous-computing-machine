@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "app": {
+      "factory": "./src/generators/app/app",
+      "schema": "./src/generators/app/schema.json",
+      "description": "Scaffold a Cloudflare app (C3 equivalent)"
+    },
+    "add": {
+      "factory": "./src/generators/add/add",
+      "schema": "./src/generators/add/schema.json",
+      "description": "Add Cloudflare features to existing app"
+    }
+  }
+}
