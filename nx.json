@@ -1,5 +1,9 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "projects": {
+    "nx-cloudflare-wrangler": "plugins/nx-cloudflare-wrangler",
+    "nx-cloudflare-c3": "plugins/nx-cloudflare-c3",
+    "hello-world": "examples/hello-world"
+  },
   "targetDefaults": {
     "@nx/js:tsc": {
       "cache": true,
