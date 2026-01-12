@@ -50,6 +50,8 @@ jobs:
         if: always()
         with:
           fail_ci_if_error: false
+        with:
+          fail_ci_if_error: false
 
   build:
     runs-on: ubuntu-latest
