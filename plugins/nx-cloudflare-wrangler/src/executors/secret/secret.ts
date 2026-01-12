@@ -40,12 +40,12 @@ const runExecutor: PromiseExecutor<SecretExecutorSchema> = async (
   try {
     const command = `npx ${args.join(' ')}`;
     
-    // For 'put' action with a value, pipe the value to stdin
+    // For 'put' action with a value, pass it via stdin
     if (action === 'put' && options.value) {
-      execSync(`echo "${options.value}" | ${command}`, {
+      execSync(command, {
         cwd: projectRoot,
         stdio: 'inherit',
-        shell: '/bin/bash',
+        input: options.value,
       });
     } else {
       execSync(command, {
